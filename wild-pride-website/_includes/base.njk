@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href= "/css/corrected.css">
+	<meta charset="utf-8">
+</head> 
+<body> 
+		<span class="back"><a href="/">Go back home</a></span>
+
+<section class="content">
+	<div class="container">
+	{{ content | safe }}
+	</div>
+</section>
+{% include 'footer.njk' %}
+</body> 
+</html>

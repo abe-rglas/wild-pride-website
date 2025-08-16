@@ -1,0 +1,58 @@
+{% for post in collections.venue -%}
+
+<div class = "venues">
+<button type="button" class="collapse"><div class="flex-box">
+
+<div class="btriangle"></div>
+
+<div class="buttonbox"><h3> {{ post.data.name }} </h3></div>
+
+</div></button>
+
+<div class="bcontent">
+<b>Events at this venue: {{ post.data.events }} </b> 
+
+**Address:** {{ post.data.address }}
+
+{% if post.data.transit %}
+**Transit:** {{ post.data.transit }}
+{% endif %}
+
+{% if post.data.amenities %}
+**On-site amenities:** {{ post.data.amenities }}
+{% endif %}
+
+{% if post.data.care %}
+**Care package:** {{ post.data.care }}
+{% endif %}
+
+{% if post.data.masks %}
+**Masks:** {{ post.data.masks }}
+{% endif %}
+
+{{ post.data.des }}
+
+</div>
+
+{%- endfor -%}
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapse");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var bcontent = this.nextElementSibling;
+    if (bcontent.style.display === "block") {
+      bcontent.style.display = "none";
+    } else {
+      bcontent.style.display = "block";
+    }
+  });
+}
+</script>
+
+

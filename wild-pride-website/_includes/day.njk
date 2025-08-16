@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href= "/css/corrected.css">
+	<meta charset="utf-8">
+</head> 
+<body> 
+	<span class="back"><a href="/">Go back home</a></span>
+<div class="cal-event">
+<div class="evtitles">
+<div class = "ev-info" > <h3>{{ title }} </h3> </div>
+<div class = "ev-info">  <h3> <em> {{ artist }} </em> </h3> </div>
+</div>
+
+<div class="flex-event">
+	<div>
+		<p> {{ content | safe }} </p>
+		{% if link %}
+<p><a href= {{ link }}> See more here. </a></p>
+{% endif %}
+<div class="cal-event-highlights">
+	<div class = "cal-info"><a href = "../../accessibility"><p> {{ place }}</p></a></div>
+<div class = "cal-info"><p> {{ when }} </p></div>
+<div class = "cal-info"><p> {{for }} </p></div> 
+<div class = "cal-info"><p> {{ cost }}</p></div>
+</div>
+	</div>
+
+<div class="poster"><img src= {{ pic}} > </div>
+</div>
+</div>
+
+</body>
+</html>

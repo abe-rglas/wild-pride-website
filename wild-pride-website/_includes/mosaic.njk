@@ -1,0 +1,6 @@
+<div class="mosaic">
+{%- for post in collections.pic -%}
+<div class = mo><div class="mopic"><a href = "{{ post.url }}"><img src= {{ post.data.pic }} alt = "{{ post.title }}"></img></a></div></div>
+{%- endfor -%}
+</div>
+
